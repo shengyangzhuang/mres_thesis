@@ -139,16 +139,16 @@
                                                       <span>Video</span>
                                                     </a>
                                                 </span>
-                                                <!-- Code Link. -->
-                                                <span class="link-block">
-                                                    <a class="external-link button is-normal is-rounded is-dark"
-                                                       href="https://github.com/shengyangzhuang/mres_thesis">
-                                                      <span class="icon">
-                                                          <i class="fab fa-github"></i>
-                                                      </span>
-                                                      <span>Code</span>
-                                                      </a>
-                                                </span>
+<!--                                                &lt;!&ndash; Code Link. &ndash;&gt;-->
+<!--                                                <span class="link-block">-->
+<!--                                                    <a class="external-link button is-normal is-rounded is-dark"-->
+<!--                                                       href="https://github.com/shengyangzhuang/mres_thesis">-->
+<!--                                                      <span class="icon">-->
+<!--                                                          <i class="fab fa-github"></i>-->
+<!--                                                      </span>-->
+<!--                                                      <span>Code</span>-->
+<!--                                                      </a>-->
+<!--                                                </span>-->
 <!--                                                &lt;!&ndash; Dataset Link. &ndash;&gt;-->
 <!--                                                <span class="link-block">-->
 <!--                                                    <a class="external-link button is-normal is-rounded is-dark"-->
@@ -303,7 +303,8 @@
                     <h2 class="title is-3">Robotic Hand-Eye Calibration</h2>
                     <h3 class="title is-4">Simulation of hand-eye calibration</h3>
                     <p>
-                        The algorithm was tested in simulation, where the ground truth was known.
+                        The algorithm was tested in simulation, where the ground truth was known. We compared the calculated
+                        results with ground truth to ensure after nine distinctive samples, the error converged to zero.
                     </p>
                     <div class="columns is-vcentered interpolation-panel">
                         <!-- First video -->
@@ -341,7 +342,31 @@
                 <br>
                 <div class="content">
                     <h2 class="title is-3">Collision-Aware Robotics Platform for Tracking</h2>
+                    <h3 class="title is-4">Obstacle avoidance</h3>
+                    <p>
+                        We generated random positions around the obstacle to show that the robot was able to move freely
+                        in the environment without collision. With RTX 4060 GPU, in the simple cuboid environment, the average solve time was
+                        within 50ms, while in a more complex environment, it took around 500 ms. RTX 4090 could improve
+                        reduce solve time by 30%.
+                    </p>
+                    <div class="columns is-vcentered interpolation-panel">
+                        <!-- First video -->
+                        <div class="column">
+                            <video autoplay height="100%" id="o1" loop muted playsinline>
+                                <source src="./static/videos/obstacle_1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Second video -->
+                        <div class="column">
+                            <video autoplay height="100%" id="o2" loop muted playsinline>
+                                <source src="./static/videos/obstacle_2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                     <h3 class="title is-4">Comparison between curobo and RRTConnect (MoveIt default planner)</h3>
+                    <p>
+                        Here we show the cuRobo planner performance in object tracking compared with RRTConnect.
+                    </p>
                     <div class="columns is-vcentered interpolation-panel">
                         <!-- First video -->
                         <div class="column">
